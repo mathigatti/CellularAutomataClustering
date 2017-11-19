@@ -1,10 +1,9 @@
-import random
 import sys
+import random
+import math
 import numpy as np
 import matplotlib.pyplot as plt 
 import matplotlib.animation as animation
-from functools import partial
-import math
 
 N = 500
 
@@ -37,16 +36,14 @@ def update(data):
   for i in range(N):
     for j in range(N):
       vecinos = [grid[i, (j-1)%N], grid[i, (j+1)%N], 
-               grid[(i-1)%N, j], grid[(i+1)%N, j], 
-               grid[(i-1)%N, (j-1)%N], grid[(i-1)%N, (j+1)%N], 
-               grid[(i+1)%N, (j-1)%N], grid[(i+1)%N, (j+1)%N]]
+               grid[(i-1)%N, j], grid[(i+1)%N, j]]
 
       # apply rules
-      vecinosHongos = len(filter(lambda x: esHongo(x),vecinos))
+      numVecinosHongos = len(filter(lambda x: esHongo(x),vecinos))
       if esHongo(grid[i,j]):
-        newGrid[i,j] = grid[i,j]-0.1*vecinosHongos
+        newGrid[i,j] = grid[i,j]-0.1*numVecinosHongos
       else:
-        if infectado(vecinosHongos):
+        if infectado(numVecinosHongos):
             newGrid[i,j] = hongo
         else:
           newGrid[i,j] = grid[i,j]
