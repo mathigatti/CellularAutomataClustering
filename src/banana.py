@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import matplotlib.animation as animation
 
-N = 500
+N = 100
 
 maxPossibleValue = 1000
 vals = range(maxPossibleValue)
