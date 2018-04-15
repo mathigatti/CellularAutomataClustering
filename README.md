@@ -16,4 +16,4 @@ Experiments with different automata rules for generating patterns made with pyth
 [example4]: MEDIA/Figure_1-4.png "Example 4"
 [example5]: MEDIA/Figure_1-5.png "Example 5"
 [example6]: MEDIA/rock_scissors_paper.png "Example 6"
-[example7]: MEDIA/Figura_1-7.png "Example 7"
+[example7]: MEDIA/Figure_1-7.png "Example 7"
