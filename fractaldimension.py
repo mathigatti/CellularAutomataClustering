@@ -1,3 +1,4 @@
+# code from https://gist.github.com/rougier/e5eafc276a4e54f516ed5559df4242c0
 import numpy as np
 
 def fractal_dimension(Z, threshold):
