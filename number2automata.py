@@ -57,6 +57,3 @@ def numberToAutomata(number, steps):
   for step_index in range(steps):
     grid = update(grid,rules)
   cv2.imwrite('images/'+str(number)+'.jpg', grid)
-
-import sys
-numberToAutomata(int(sys.argv[1]),int(sys.argv[2]))
