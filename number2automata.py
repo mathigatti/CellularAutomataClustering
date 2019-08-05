@@ -1,5 +1,6 @@
 import numpy as np
-import cv2
+import matplotlib.pyplot as plt
+from PIL import Image
 
 ON = 255
 OFF = 0
@@ -56,5 +57,12 @@ def numberToAutomata(number, steps):
 
   for step_index in range(steps):
     grid = update(grid,rules)
-  cv2.imwrite('images/'+str(number)+'.tiff', grid)
-  cv2.imwrite('images/'+str(number)+'.gif', grid)
+
+  npGrid = np.uint8(np.array(grid))
+  image = Image.fromarray(npGrid)
+
+  filename = 'images/'+str(number)+'.gif'
+  image.save(filename, format='GIF', save_all=True, duration=0, loop=0)
+
+  filename = 'images/'+str(number)+'.tiff'
+  image.save(filename, format='TIFF')
