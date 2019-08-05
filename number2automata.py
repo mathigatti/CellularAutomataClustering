@@ -56,6 +56,5 @@ def numberToAutomata(number, steps):
 
   for step_index in range(steps):
     grid = update(grid,rules)
-  cv2.imwrite('images/'+str(number)+'.jpg', grid)
   cv2.imwrite('images/'+str(number)+'.tiff', grid)
-  cv2.imwrite('images/'+str(number)+'.png', grid)
+  cv2.imwrite('images/'+str(number)+'.gif', grid)
